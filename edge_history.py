@@ -7,7 +7,7 @@ then queries the SQLite database.
 
 Requires a helper that runs an elevated PowerShell command on Windows, to
 create the VSS shadow copy. By default it looks for `win_admin.py` from the
-companion project:  https://github.com/marcusice/wsl-win-admin-bridge
+companion project:  https://github.com/marcus-lhkmarcus/wsl-win-admin-bridge
 Point at it with the WIN_ADMIN env var if it isn't auto-detected.
 
 Usage:
@@ -164,7 +164,7 @@ def vss_copy(profile=DEFAULT_PROFILE):
     if not WIN_ADMIN:
         print(
             "ERROR: win_admin.py helper not found. Install wsl-win-admin-bridge\n"
-            "  (https://github.com/marcusice/wsl-win-admin-bridge) and either place\n"
+            "  (https://github.com/marcus-lhkmarcus/wsl-win-admin-bridge) and either place\n"
             "  win_admin.py next to this script or set the WIN_ADMIN env var to its path.",
             file=sys.stderr,
         )

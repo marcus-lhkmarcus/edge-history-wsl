@@ -44,7 +44,7 @@ lock without closing Edge. The shadow copy is created and deleted per refresh
 
 - Windows 10/11 with WSL2, Microsoft Edge installed
 - Python 3.7+ inside WSL (standard library only — no `pip install`)
-- **[wsl-win-admin-bridge](https://github.com/marcusice/wsl-win-admin-bridge)** —
+- **[wsl-win-admin-bridge](https://github.com/marcus-lhkmarcus/wsl-win-admin-bridge)** —
   VSS creation needs admin rights, which this tool obtains through that helper's
   `win_admin.py`. Install it (one-time scheduled-task setup), then either:
   - place/symlink its `win_admin.py` next to `edge_history.py`, or

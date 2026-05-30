@@ -20,7 +20,7 @@ edge_history.py        # CLI (Python standard library only)
 ```
 
 Hard dependency: the **win-admin helper** `win_admin.py` from
-https://github.com/marcusice/wsl-win-admin-bridge — VSS creation needs admin
+https://github.com/marcus-lhkmarcus/wsl-win-admin-bridge — VSS creation needs admin
 rights, obtained through it. Auto-located next to this script / as a sibling
 checkout / under $HOME, or set via the `WIN_ADMIN` env var.
 

@@ -23,7 +23,7 @@ Chromium epoch, Linux-to-Windows.
 
 ## Dependency
 
-- [wsl-win-admin-bridge](https://github.com/marcusice/wsl-win-admin-bridge): provides `win_admin.py`, used to run the elevated PowerShell that creates the VSS snapshot. Set `WIN_ADMIN` to its path or place `win_admin.py` next to `edge_history.py`.
+- [wsl-win-admin-bridge](https://github.com/marcus-lhkmarcus/wsl-win-admin-bridge): provides `win_admin.py`, used to run the elevated PowerShell that creates the VSS snapshot. Set `WIN_ADMIN` to its path or place `win_admin.py` next to `edge_history.py`.
 
 ## Quick start
 
