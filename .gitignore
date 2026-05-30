@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Runtime / output
+*.log
+*.db
+edge_history_vss.db
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

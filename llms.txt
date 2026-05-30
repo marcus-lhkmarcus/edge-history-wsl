@@ -1,0 +1,38 @@
+# edge-history-wsl
+
+> Read the Microsoft Edge browsing history from inside WSL2 (Linux), even while
+> Edge is running. Uses a Windows Volume Shadow Copy (VSS) to bypass Edge's
+> exclusive lock on the History SQLite database, then queries a local copy:
+> search, filter by date/range, top sites, top domains, stats, full dump.
+> Python standard library only. Depends on the win-admin helper for the elevated
+> VSS step.
+
+Keywords: Microsoft Edge, Edge history, browsing history, Chromium history,
+SQLite, VSS, Volume Shadow Copy, shadow copy, locked database, WSL, WSL2,
+Windows, forensics, activity tracking, browser history reader, last_visit_time,
+Chromium epoch, Linux-to-Windows.
+
+## Docs
+
+- [README](README.md): Overview, how it works (diagram), requirements, full command list, configuration, security/privacy notes.
+- [AGENTS.md](AGENTS.md): Machine-readable guide for AI agents — exact commands, JSON shapes, preconditions, safety.
+
+## Code
+
+- [edge_history.py](edge_history.py): The whole tool. CLI subcommands: `recent`, `search`, `today`, `date`, `range`, `top`, `domains`, `stats`, `dump`. Global flags `--profile`, `--json`. Stdlib only.
+
+## Dependency
+
+- [wsl-win-admin-bridge](https://github.com/marcusice/wsl-win-admin-bridge): provides `win_admin.py`, used to run the elevated PowerShell that creates the VSS snapshot. Set `WIN_ADMIN` to its path or place `win_admin.py` next to `edge_history.py`.
+
+## Quick start
+
+- Install the win-admin helper (one-time admin setup) and expose it via `WIN_ADMIN`.
+- `python3 edge_history.py recent 50`
+- `python3 edge_history.py search "github"` · `python3 edge_history.py stats`
+
+## Notes
+
+- Windows username auto-detected; override with `WIN_USER`.
+- Edge profile selectable with `--profile "Profile 2"` (before the subcommand).
+- Extracted DB is cached for 2 minutes in the system temp dir.
